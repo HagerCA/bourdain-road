@@ -144,7 +144,8 @@ main{padding:10px 0 40px;}
 .card .src:hover{color:var(--brass-hi);}
 .card .when{font-family:var(--type);font-size:11px;color:var(--chili);}
 /* Been there */
-.tick{position:absolute;top:12px;right:12px;width:32px;height:32px;border:1.5px solid rgba(236,227,208,.35);background:transparent;cursor:pointer;display:grid;place-items:center;padding:0;border-radius:2px;transition:all .2s;}
+/* z-index keeps the box clickable on a ticked card: the grayscale fade on .top makes a layer that would otherwise cover it */
+.tick{position:absolute;z-index:2;top:12px;right:12px;width:32px;height:32px;border:1.5px solid rgba(236,227,208,.35);background:transparent;cursor:pointer;display:grid;place-items:center;padding:0;border-radius:2px;transition:all .2s;}
 .tick svg{opacity:0;transition:opacity .2s;}
 .tick:focus-visible{outline:2px solid var(--brass);outline-offset:2px;}
 .card.been{border-top-color:#4a4640;background:#141210;}
